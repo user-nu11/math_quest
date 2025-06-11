@@ -1,13 +1,83 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="src/index.css"> 
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Math Quest</title>
   </head>
+
+
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+
+    <div class="container">
+      <form class="form--unhidden" id="Login" action="loginPage">
+        <div class="form-inputs">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-inputs">
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="pass" required>
+        </div>
+        <div class="form-inputs">
+            <button type="submit" id="loginButton">Login</button>
+        </div>
+        <p class="form__text" id="ToCreateAccount">
+            <a class="form__link" href="#CreateAccount" id="linkCreateAccount">Don't have an account? Create account</a>
+        </p>
+      </form>
+
+    
+      <form class="form--hidden" id="CreateAccount" action="registerPage">
+        <div class="form-inputs">
+            <label for="newEmail">Email:</label>
+            <input type="text" id="newEmail" name="newEmail" required>
+        </div>
+        <div class="form-inputs">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+        </div>
+        <div class="form-inputs">
+            <label for="newPass">Password:</label>
+            <input type="text" id="newPass" name="newPass" required>
+        </div>
+        <div class="form-inputs">
+            <button type="submit" id="registerButton">Register</button>
+        </div>      
+        <p class="form__text" id="ToLogin">
+            <a class="form__link" href="#ChangeLogin" id="linkLogin">Already have an account? Sign in</a>
+        </p>
+      </form>
+    </div>
+
+    <div class = "form-hidden" id ="game">
+      <div class = "form-unhidden" id = "map">
+        <!-- This part is going to be the main part of the app. Should include at least five levels for 
+         the prototype, the last one being the most difficult, aka a boss level. levels should be accessible 
+         through buttons-->
+
+      </div>
+
+      <div class = "form-hidden" id = "userMenu">
+
+        <!-- This part should include Group creation, note sharing and video calls. I dont fucking know how 
+         to do this yet, but it isnt rlly the main part so should be fine-->
+
+      </div>
+
+      <div class = "form-hidden" id = "settings">
+
+        <!-- acessibility settings, changing colours and stuff, idk honestly-->
+
+      </div>
+    </div>
+
+
+  <script type="module" src="/src/main.jsx"></script>
   </body>
+  
 </html>
